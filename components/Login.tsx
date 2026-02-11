@@ -6,10 +6,10 @@ export default function Login() {
     const [login, setLogin] = useState(false);
     const [userName, setUserName] = useState("");
 
-    const getUserName = (e) => {
+    const getUserName = (e) => { //get input element value as userName
         setUserName(e.target.value);
     }
-    const loginVerify = (e) => {
+    const loginVerify = (e) => { //check user input text or not if yes save it to userName
         if (userName != "") {
             e.preventDefault();
             console.log(userName);
@@ -22,11 +22,11 @@ export default function Login() {
     }
     
     const loginPage = () => {
-        if (login) {
+        if (login) { //Rerender page to another page
             return (
                 <Header userName={userName} />
             )
-        } else {
+        } else { //if user not input text keep this page
             return (
                 <div
                     style={{

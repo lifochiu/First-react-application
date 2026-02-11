@@ -18,7 +18,7 @@ export default function HomePage({ pageInfo }: pageInfoProps) {
     const getExponentNum = (e) => {
         setExponentNum(e.target.value);
     }
-    const getResult = (e) => {
+    const getResult = (e) => { //Math power calculate
         e.preventDefault();
         let result = Math.pow(baseNum, exponentNum);
         setResult(result);

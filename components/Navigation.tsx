@@ -9,7 +9,7 @@ export default function Navigation() {
     const [page, setPage] = useState("Home page");
 
 
-    const selector = () => {
+    const selector = () => { //switch different page
         if (page == "Home page") {
             return (
                 <Home pageInfo={page} />
